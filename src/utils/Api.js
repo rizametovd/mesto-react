@@ -4,28 +4,25 @@ class Api {
         this._headers = config.headers;
     }
 
+    _checkResponse(res) {
+        if (res.ok) {
+            return res.json();
+        }
+        return Promise.reject(`Ошибка: ${res.status}`);
+    }
+
     getUserInfo() {
         return fetch(`${this._url}users/me`, {
             headers: this._headers
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Ошибка: ${res.status}. Данные пользователя с сервера не получены`);
-            })
+            .then(this._checkResponse);
     }
 
     getInitialCards() {
         return fetch(`${this._url}cards`, {
             headers: this._headers
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Ошибка: ${res.status}. Карточки с сервера не загружены`);
-            })
+            .then(this._checkResponse);
     }
 
     updateUserInfo(formData) {
@@ -38,12 +35,7 @@ class Api {
                 avatar: formData.avatar
             })
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Ошибка: ${res.status}. Данные пользователя не отправлены на сервер`);
-            })
+            .then(this._checkResponse);
     }
 
     createCard(formData) {
@@ -55,12 +47,7 @@ class Api {
                 link: formData.link
             })
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Ошибка: ${res.status}. Карточка на сервер не добавлена`);
-            })
+            .then(this._checkResponse);
     }
 
     removeCard(id) {
@@ -68,12 +55,7 @@ class Api {
             method: 'DELETE',
             headers: this._headers
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Ошибка: ${res.status}. Карточку не удалось удалить`);
-            })
+            .then(this._checkResponse);
     }
 
     likeCard(id) {
@@ -81,12 +63,7 @@ class Api {
             method: 'PUT',
             headers: this._headers
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Ошибка: ${res.status}. Лайк не поставлен`);
-            })
+            .then(this._checkResponse);
     }
 
     unLikeCard(id) {
@@ -94,12 +71,7 @@ class Api {
             method: 'DELETE',
             headers: this._headers
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Ошибка: ${res.status}. Лайк не удален`);
-            })
+            .then(this._checkResponse);
     }
 
     updateAvatar(formData) {
@@ -110,12 +82,7 @@ class Api {
                 avatar: formData.avatar
             })
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Ошибка: ${res.status}. Аватар не обновлен`);
-            })
+            .then(this._checkResponse);
     }
 
 }
