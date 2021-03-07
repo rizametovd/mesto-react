@@ -87,6 +87,7 @@ class Api {
 
 }
 
+
 export const api = new Api({
     baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-20/',
     headers: {
