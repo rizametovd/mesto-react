@@ -17,9 +17,7 @@ function Main(props) {
                 setUserAvatar(userData.avatar);
             })
             .catch(err => console.log(err.status));
-    }, []);
 
-    useEffect(() => {
         api.getInitialCards()
             .then(cardsData => {
                 setCards(cardsData);
