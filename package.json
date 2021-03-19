@@ -1,5 +1,7 @@
 {
+  "author": "David Rizametov",
   "name": "mesto-react",
+  "description": "Instagram like application",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

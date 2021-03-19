@@ -21,7 +21,8 @@ function AddPlacePopup(props) {
             name,
             link
         });
-
+        setName('');
+        setLink('');
     }
 
     return (
@@ -38,7 +39,7 @@ function AddPlacePopup(props) {
                     id="name__input"
                     type="text"
                     name="name"
-                    defaultValue=""
+                    value={name}
                     placeholder="Название"
                     className="popup__field popup__input"
                     minLength="2"
@@ -53,7 +54,7 @@ function AddPlacePopup(props) {
                     id="about__input"
                     type="text"
                     name="about"
-                    defaultValue=""
+                    value={link}
                     placeholder="Ссылка на картинку"
                     className="popup__field popup__input"
                     minLength="2"
