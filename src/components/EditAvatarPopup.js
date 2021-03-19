@@ -17,6 +17,7 @@ function EditAvatarPopup(props) {
         props.onUpdateAvatar({
             avatar: avatar
         });
+        setAvatar('');
     }
 
     return (
@@ -33,7 +34,7 @@ function EditAvatarPopup(props) {
                     id="avatar__input"
                     type="url"
                     name="avatar"
-                    defaultValue=""
+                    value={avatar}
                     placeholder="Ссылка на аватар"
                     className="popup__field popup__field_add popup__image-link popup__input"
                     required
