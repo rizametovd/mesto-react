@@ -6,6 +6,7 @@
 
 ## Changelog Спринт 11
 1. Сделал загрузку карточек, удаление и лайки. Все по ТЗ.
+2. Ссылка на GH-Pages: https://rizametovd.github.io/mesto-react/
 
 ## Changlelog Спринт 10
 1. Проект Место портирован на Реакт.
