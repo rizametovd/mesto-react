@@ -25,20 +25,19 @@ class Api {
             .then(this._checkResponse);
     }
 
-    updateUserInfo(formData) {
+    setUserInfo(formData) {
         return fetch(`${this._url}users/me`, {
             method: 'PATCH',
             headers: this._headers,
             body: JSON.stringify({
                 name: formData.name,
-                about: formData.about,
-                avatar: formData.avatar
+                about: formData.about
             })
         })
             .then(this._checkResponse);
     }
 
-    createCard(formData) {
+    addCard(formData) {
         return fetch(`${this._url}cards`, {
             method: 'POST',
             headers: this._headers,
@@ -58,23 +57,15 @@ class Api {
             .then(this._checkResponse);
     }
 
-    likeCard(id) {
-        return fetch(`${this._url}cards/likes/${id}`, {
-            method: 'PUT',
+    changeLikeCardStatus(cardId, isLiked) {
+        return fetch(`${this._url}cards/likes/${cardId}`, {
+            method: isLiked ? 'PUT' : 'DELETE',
             headers: this._headers
         })
             .then(this._checkResponse);
     }
 
-    unLikeCard(id) {
-        return fetch(`${this._url}cards/likes/${id}`, {
-            method: 'DELETE',
-            headers: this._headers
-        })
-            .then(this._checkResponse);
-    }
-
-    updateAvatar(formData) {
+    setUserAvatar(formData) {
         return fetch(`${this._url}users/me/avatar`, {
             method: 'PATCH',
             headers: this._headers,
@@ -86,7 +77,6 @@ class Api {
     }
 
 }
-
 
 export const api = new Api({
     baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-20/',

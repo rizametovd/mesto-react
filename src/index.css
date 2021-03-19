@@ -42,4 +42,5 @@
 @import url('./blocks/popup/__submit-button/popup__submit-button.css');
 @import url('./blocks/popup/__button/_disabled/popup__button_disabled.css');
 @import url('./blocks/cards/__item-delete-button/cards__item-delete-button.css');
+@import url('./blocks/cards/__item-delete-button/_hidden/cards__item-delete-button_hidden.css');
 @import url('./blocks/cards/__item-likes/cards__item-likes.css');

@@ -13,10 +13,6 @@
     background-image: url('../../../images/edit-profile-icon.svg');
     display: block;
     position: absolute;
-    top: 40px;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background-repeat: no-repeat;
     background-position: center;
 }
