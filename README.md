@@ -1,4 +1,4 @@
-# Проект: Mesto на React
+# Mesto на React
 
 ![React](https://img.shields.io/badge/-React-583e87?logo=react&logoColor=white)
 ![HTML5](https://img.shields.io/badge/-HTML5-583e87?logo=html5&logoColor=white)
@@ -7,7 +7,8 @@
 ![Webpack](https://img.shields.io/badge/-Webpack-583e87?logo=webpack&logoColor=white)
 
 ## Описание
-SPA приложение на React. Аналог Инстаграма. Ссылка на gh-pages: https://rizametovd.github.io/mesto-react/ .
+SPA приложение на React. Аналог Инстаграма.</br>
+Ссылка на gh-pages: https://rizametovd.github.io/mesto-react/ .
 
 ## Превью
 ![Превью проекта](./public/preview.gif)
