@@ -10,9 +10,6 @@
 SPA приложение на React. Аналог Инстаграма.</br>
 Ссылка на gh-pages: https://rizametovd.github.io/mesto-react/ .
 
-## Превью
-![Превью проекта](./public/preview.gif)
-
 ## Задача
 * Портировать проект [Mesto](https://github.com/rizametovd/mesto) на React
 
@@ -36,3 +33,6 @@ npm install
 npm run start
 ```
 Если все прошло успешно, проект будет запущен на `http://localhost:3000`
+
+## Превью
+![Превью проекта](./public/preview.gif)
